@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstring>
+int main()
+{
+    using namespace std;
+   const int Tis = 20;
+    const int Tot = 20;
+    char result[100];
+    char name[Tis];
+    char surname[Tot];
+    cout << "Enter your name: ";
+    cin.getline(name, Tis);
+    cout << "Enter your surname: ";
+    cin.getline(surname, Tot);
+    strcpy(result, surname);
+    strcat(result, ", ");
+    strcat(result, name);
+    cout << result;
+    return 0;
+    // if we have char arrays we must use cin.getline(variable, size)
+    //if we have string we need to use getline(cin,variable)
+    //we could use cin in both examples but it does not read spaces
+}
